@@ -1,2 +1,2 @@
 # dotfiles
-A repo containingdotfiles
+A repo containing dotfiles
