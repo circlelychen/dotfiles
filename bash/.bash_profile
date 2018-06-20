@@ -7,13 +7,8 @@ export CSIPATH=$GOPATH/src/htc.com/csi
 export PATH="/usr/local/bin:$PATH"
 
 # add pyenv bin folder
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
-# arcanist executalbe
-#export PATH="$PATH:$HOME/arcanist/arcanist/bin"
 
 # $GOPATH/bin
 export PATH="$GOPATH/bin:$PATH:"
@@ -22,10 +17,6 @@ export PATH="$GOPATH/bin:$PATH:"
 #export PATH="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH:"
 
 export EDITOR=vim
-
-# setup for virtualenv for python3
-#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-#source /usr/local/bin/virtualenvwrapper.sh
 
 alias ls='ls -G'
 alias ll='ls -altG'
