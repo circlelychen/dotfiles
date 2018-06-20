@@ -1,8 +1,8 @@
 #!/bin/sh -x 
 
-ln -s git/.gitconfig ~/.gitconfig
-ln -s git/.gitignore ~/.gitignore
+ln -s $(pwd)/git/.gitconfig ~/.gitconfig
+ln -s $(pwd)/git/.gitignore ~/.gitignore
 
-ln -s bash/.bash_profile ~/.bash_profile
+ln -s $(pwd)/bash/.bash_profile ~/.bash_profile
 
-ln -s tmux/.tmux.conf ~/.tmux.config
+ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.config
