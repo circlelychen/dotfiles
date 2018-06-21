@@ -5,4 +5,4 @@ ln -s $(pwd)/git/.gitignore ~/.gitignore
 
 ln -s $(pwd)/bash/.bash_profile ~/.bash_profile
 
-ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.config
+ln -s $(pwd)/tmux/.tmux.conf ~/.tmux.conf
