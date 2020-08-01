@@ -26,8 +26,10 @@
 [difftool]
 	prompt = false
 [alias]
+	pr = pull --rebase
 	st = status
 	co = checkout
 	br = branch
 	di = diff
+	pr = pull
         lg = log --branches --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %Cblue(%an)%Creset' --abbrev-commit --date=relative
