@@ -1,9 +1,13 @@
 export WORKON_HOME=$HOME/.virtualenvs
 
+# configure locale setting
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
 export GOPATH=$HOME/git/go
 export CSIPATH=$GOPATH/src/htc.com/csi
 
-# add /usr/local/bin 
+# add /usr/local/bin
 export PATH="/usr/local/bin:$PATH"
 
 # add pyenv bin folder
