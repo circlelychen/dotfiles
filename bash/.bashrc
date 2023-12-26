@@ -4,6 +4,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH:"
+
 # add /usr/local/bin
 export PATH="/usr/local/bin:$PATH"
 
@@ -12,8 +15,8 @@ export PATH="/usr/local/bin:$PATH"
 # if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # $GOPATH/bin
-export GOPATH=$HOME/git/go
-export PATH="$GOPATH/bin:$PATH:"
+export GOPATH="/usr/local/go"
+export PATH="$GOPATH/bin:$PATH"
 
 # add google-cloud-sdk/bin bin into PATH
 # export PATH="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH:"
@@ -45,11 +48,19 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-GIT_PS1_SHOWDIRTYSTATE=true
+# Source the git bash completion file
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+fi
 
-PS1='\[\033[01m\][\[\033[01;34m\]\u@\h\[\033[00m\]\[\033[01m\] $(__git_ps1)] \[\033[01;32m\]\w\[\033[00m\]\n\[\033[01;34m\]$\[\033[00m\]> '
-
-
+# Source the git prompt file
+if [ -f ~/.git-prompt.sh ]; then
+    source ~/.git-prompt.sh
+    GIT_PS1_SHOWDIRTYSTATE=true
+    GIT_PS1_SHOWSTASHSTATE=true
+    GIT_PS1_SHOWUPSTREAM="auto"
+    PS1='\[\033[01m\][\[\033[01;34m\]\u@\h\[\033[00m\]\[\033[01m\] $(__git_ps1)] \[\033[01;32m\]\w\[\033[00m\]\n\[\033[01;34m\]$\[\033[00m\]> '
+fi
 
 #export NVM_DIR="/Users/circlelychen/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
