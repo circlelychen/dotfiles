@@ -14,9 +14,9 @@ export PATH="/usr/local/bin:$PATH"
 # if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 # if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-# $GOPATH/bin
-export GOPATH="/usr/local/go"
-export PATH="$GOPATH/bin:$PATH"
+# $GOROOT/bin
+export GOROOT=/usr/local/go 
+export PATH="~/go/bin:$GOROOT/bin:$PATH"
 
 # add google-cloud-sdk/bin bin into PATH
 # export PATH="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:$PATH:"
