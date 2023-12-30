@@ -14,7 +14,7 @@ then
   if test "$(uname)" = "Darwin"
   then
     # Install Homebrew
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # Install packages
     apps=(
@@ -23,8 +23,8 @@ then
         cmake
         git
         grep
-        httpie
         jq
+        yq
         wget
     )
     brew install "${apps[@]}"

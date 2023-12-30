@@ -27,6 +27,12 @@ export PATH="$HOME/bin:$PATH"
 # add $HOME/.poetry/bin
 # export PATH="$HOME/.poetry/bin:$PATH"
 
+# If you need to have openjdk@17 first in your PATH, run:
+#echo 'export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"' >> /Users/circlelychen/.bash_profile
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH" 
+#For compilers to find openjdk@17 you may need to set:
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@17/include"
+
 export EDITOR=vim
 
 alias ls='ls -G'
